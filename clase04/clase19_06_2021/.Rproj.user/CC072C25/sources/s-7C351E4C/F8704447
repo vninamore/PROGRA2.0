@@ -1,0 +1,28 @@
+{
+    "id": "F8704447",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1624142352476.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "id": "69e0d5e533ca4c1c95c0f634e1b4cba9",
+        "name": "terremotos$Source",
+        "title": "terremotos$Source",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 2322206432585609839,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1624142352476,
+    "read_only": false,
+    "read_only_alternatives": []
+}

@@ -1,0 +1,90 @@
+x<-2
+y<-5
+x^y
+a<- 28%%6
+a
+#formula cuadrática
+
+LS=1.07(l/20)^0.28(a/(10^22)^1.45
+                  
+        
+K1<-5
+k2<-3
+K1*K2+0.043*(A-2)+0.033*(P-3)
+
+a<-1:100
+a
+secuencia= seq(from=1,to=5360, by=10)
+secuencia[secuencia<500]
+x<- c(1,2,3,4)
+x!
+  
+vector01<-1:9
+matriz01<-matrix(vector01, nrow=3)
+
+matriz01[2,3]<-1000
+matriz01
+View(iris)
+iris[2,4]<-"girasol"
+iris$Species=as.vector(iris$Species)
+iris[2,5]<-"girasol"
+
+coordenadas<- list(x=10:15, y= matrix(15:20, nrow=2),z=list(m="A"))
+coordenadas
+coordenadas[[2]]
+coordenadas$y[2,2]
+
+coordenadas[[1]]
+
+install.packages("tidyverse")
+install.packages("read")
+library(readr)
+datos<-read.csv("https://raw.githubusercontent.com/ryali93/ProgramacionR/master/data/pobreza_extrema.csv", sep=";")
+datos
+View(datos)
+newdatos<-datos[datos$DEPARTAMENTO == "Puno", ]
+newdatos
+datos[datos[,"DEPARTAMENTO"] == "Puno", ]
+
+newdatos$miNombre=c("vanessa")
+newdatos
+View(newdatos)
+write.csv(newdatos,"D:/R/clase02_electivo/clase2_1")
+
+getwd()
+setwd("D:/R/clase02_electivo/clase2")
+
+datos[datos[,"PROVINCIA"] =="Carabaya" & datos[,"DEPARTAMENTO"]=="Puno",]
+subset(datos, PROVINCIA=="Carabaya" & DEPARTAMENTO=="Puno")
+
+
+suma<- function(valor1, valor2=5) {
+  resultado<- valor1+valor2
+  return(resultado)
+}
+a<-5
+suma(a)
+
+potencia<- function(valor3, valor4=2) {
+  resultado<- valor3^valor4
+  return(resultado)
+}
+b<-8
+potencia(b)
+
+
+convert<- function(a,b=32) {
+  resultado<- (a*1.8)+b
+  return(resultado)
+}
+c<-5
+convert(c)
+
+install.packages ("MASA")
+library( MASA )
+kern  <- kde2d ( x , y )
+
+de nivel, ( kern , drawlabels  =  FALSO , NLEVELS  =  6 ,
+            col  = rev (heat.colors ( 6 )), add  =  TRUE , lwd  =  3 )
+
+

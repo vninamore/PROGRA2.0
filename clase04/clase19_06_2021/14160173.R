@@ -1,11 +1,3 @@
----
-title: "practica_que_jaléxd"
-author: "Vanessa"
-date: "24/6/2021"
-output: github_document
----
-
-```{r}
 #Vanessa nina 14160173
 #1)
 a<-10000%%3
@@ -50,23 +42,6 @@ y<-1:10
 prod(log(sqrt(y)))
 #10)
 
-R=25
-teta= 10 #grados
-d=R/2
-ar1 <- function(R,teta){
-  result <- (((pi*(R^2))*teta)/360)
-  return(result)
-}
-area1 <- ar1(R,teta)
-area1
-ar2 <- function(d,R){
-  result2 <- (sqrt(R^2 - d^2))
-  return(result2)
-}
-area2 <-ar2(d,R)
-area2
-ar_final <- area1 - area2
-ar_final
 
 #11)
 
@@ -75,7 +50,7 @@ n
 ninvert<- c(15:5)
 ninvert
 n<- c(5:15)
-rev(n)#resulta lo mismo que al invertirlo usar la funciÃ³n rev
+rev(n)#resulta lo mismo que al invertirlo usar la función rev
 
 #12)
 w<- 10:100
@@ -101,5 +76,3 @@ df[df$mpg<18.0,]
 df[df$cyl==4,]
 
 df[df$wt>2.500&df$am==1,]
-```
-

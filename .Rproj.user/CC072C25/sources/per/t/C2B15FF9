@@ -1,0 +1,28 @@
+{
+    "id": "C2B15FF9",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1623513953097.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "id": "0a5476b767f34b1488fc254f97b47de2",
+        "name": "datos$DEPARTAMENTO",
+        "title": "datos$DEPARTAMENTO",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 2219289148320,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1623513953097,
+    "read_only": false,
+    "read_only_alternatives": []
+}
