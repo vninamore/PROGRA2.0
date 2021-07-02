@@ -5,7 +5,7 @@ Vanessa
 
 *Primera Práctica calificada*
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/UNMSM_coatofarms_seal.svg" alt="JuveR" width="300px">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/UNMSM_coatofarms_seal.svg" width="80" height="80">
 
 ``` r
 #Vanessa Nina 14160173
@@ -295,3 +295,7 @@ df[df$wt>2.500&df$am==1,]
     ## Ferrari Dino   19.7   6  145 175 3.62 2.770 15.50  0  1    5    6
     ## Maserati Bora  15.0   8  301 335 3.54 3.570 14.60  0  1    5    8
     ## Volvo 142E     21.4   4  121 109 4.11 2.780 18.60  1  1    4    2
+
+<img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="100" height="100" />
+
+**fin**

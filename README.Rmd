@@ -8,7 +8,7 @@ output: github_document
 
 *Primera Práctica calificada* 
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/UNMSM_coatofarms_seal.svg" alt="JuveR" width="300px">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/UNMSM_coatofarms_seal.svg" width="80" height="80">
 
 
 ```{r}
@@ -121,4 +121,9 @@ df[df$cyl==4,]
 
 df[df$wt>2.500&df$am==1,]
 ```
+
+<img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="100" height="100" />
+
+**fin**
+
 
