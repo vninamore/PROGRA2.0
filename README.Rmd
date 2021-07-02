@@ -6,6 +6,11 @@ output: github_document
 
 ---
 
+*Primera Práctica calificada* 
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/UNMSM_coatofarms_seal.svg" alt="JuveR" width="300px">
+
+
 ```{r}
 #Vanessa Nina 14160173
 #1)
@@ -84,7 +89,10 @@ sum(w^3+ 4*w^2)
 #13)
 z<- 1:25
 sum(2^z/z +3^z/z^2)
+```
+**Ahora crearemos gráficos aprovechando el data frame de la pregunta N°14**
 
+```{r}
 #14)
 df<-read.csv("https://raw.githubusercontent.com/fhernanb/datos/master/Paises.txt",sep="",dec=".")
 View(df)

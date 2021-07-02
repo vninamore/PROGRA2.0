@@ -3,6 +3,10 @@ practica\_que\_jaléxd
 Vanessa
 24/6/2021
 
+*Primera Práctica calificada*
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/UNMSM_coatofarms_seal.svg" alt="JuveR" width="300px">
+
 ``` r
 #Vanessa Nina 14160173
 #1)
@@ -184,6 +188,9 @@ sum(2^z/z +3^z/z^2)
 
     ## [1] 2129170437
 
+**Ahora crearemos gráficos aprovechando el data frame de la pregunta
+N°14**
+
 ``` r
 #14)
 df<-read.csv("https://raw.githubusercontent.com/fhernanb/datos/master/Paises.txt",sep="",dec=".")
@@ -191,14 +198,14 @@ View(df)
 plot(df)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 ``` r
 alta<-subset(df, alfabetizacion >=70)
 plot(alta)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-1-2.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-2-2.png)<!-- -->
 
 ``` r
 x<- alta$Pais
@@ -207,7 +214,7 @@ y<- alta$alfabetizacion
 hist(df$alfabetizacion, freq = T, col = "skyblue", labels = T)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-1-3.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-2-3.png)<!-- -->
 
 ``` r
 #primer 
