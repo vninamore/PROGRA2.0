@@ -4,7 +4,7 @@ Vanessa
 24/6/2021
 
 ``` r
-#Vanessa nina 14160173
+#Vanessa Nina 14160173
 #1)
 a<-10000%%3
 a #es lo que sobra al repartir 10000$ entre 3 personas
@@ -60,7 +60,7 @@ sum_s
     ## [1] 5050
 
 ``` r
-## la suma es 5050, usando sumatoria y la formula
+## la suma es 5050, usando sumatoria y la fórmula
 
 #6)
 e<-c(1, -4, 5, 9, -4)
@@ -163,7 +163,7 @@ ninvert
 
 ``` r
 n<- c(5:15)
-rev(n)#resulta lo mismo que al invertirlo usar la funciÃ³n rev
+rev(n)#resulta lo mismo que al invertirlo usar la función rev
 ```
 
     ##  [1] 15 14 13 12 11 10  9  8  7  6  5
@@ -187,7 +187,30 @@ sum(2^z/z +3^z/z^2)
 ``` r
 #14)
 df<-read.csv("https://raw.githubusercontent.com/fhernanb/datos/master/Paises.txt",sep="",dec=".")
-#primero 
+View(df)
+plot(df)
+```
+
+![](README_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
+
+``` r
+alta<-subset(df, alfabetizacion >=70)
+plot(alta)
+```
+
+![](README_files/figure-gfm/unnamed-chunk-1-2.png)<!-- -->
+
+``` r
+x<- alta$Pais
+y<- alta$alfabetizacion
+
+hist(df$alfabetizacion, freq = T, col = "skyblue", labels = T)
+```
+
+![](README_files/figure-gfm/unnamed-chunk-1-3.png)<!-- -->
+
+``` r
+#primer 
 length(df)
 ```
 
