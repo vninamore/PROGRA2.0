@@ -1,14 +1,15 @@
-practica\_que\_jaléxd
+práctica\_que\_jaléxd
 ================
 Vanessa
 24/6/2021
 
-*Primera Práctica calificada*
+<span style="color:green"> **Primera Práctica calificada** </span>
+
+<span style="color:orange"> *Vanessa Nina 14160173* </span>
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/UNMSM_coatofarms_seal.svg" width="80" height="80">
 
 ``` r
-#Vanessa Nina 14160173
 #1)
 a<-10000%%3
 a #es lo que sobra al repartir 10000$ entre 3 personas
@@ -65,7 +66,9 @@ sum_s
 
 ``` r
 ## la suma es 5050, usando sumatoria y la fórmula
+```
 
+``` r
 #6)
 e<-c(1, -4, 5, 9, -4)
 min(e)
@@ -198,14 +201,14 @@ View(df)
 plot(df)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 ``` r
 alta<-subset(df, alfabetizacion >=70)
 plot(alta)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-2-2.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-14-2.png)<!-- -->
 
 ``` r
 x<- alta$Pais
@@ -214,7 +217,7 @@ y<- alta$alfabetizacion
 hist(df$alfabetizacion, freq = T, col = "skyblue", labels = T)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-2-3.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-14-3.png)<!-- -->
 
 ``` r
 #primer 
@@ -310,8 +313,8 @@ plot(n, funcion, xaxt = "n")
 axis(1, at = seq(round(min(n)), round(max(n)), by = 1), labels =m)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-2-4.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
 
 <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="100" height="100" />
 
-**fin**
+<span style="color:Cyan"> **Gracias** </span>
