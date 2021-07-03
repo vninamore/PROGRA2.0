@@ -296,6 +296,22 @@ df[df$wt>2.500&df$am==1,]
     ## Maserati Bora  15.0   8  301 335 3.54 3.570 14.60  0  1    5    8
     ## Volvo 142E     21.4   4  121 109 4.11 2.780 18.60  1  1    4    2
 
+``` r
+#16
+x<-0:365
+y<-pi*2*(x-81)/365
+funcion<-9.87*sin(2*y)-7.35*cos(y)-1.5*sin(y)
+n<-month.abb
+n<-x/33.27
+m<-month.abb
+
+
+plot(n, funcion, xaxt = "n")
+axis(1, at = seq(round(min(n)), round(max(n)), by = 1), labels =m)
+```
+
+![](README_files/figure-gfm/unnamed-chunk-2-4.png)<!-- -->
+
 <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" width="100" height="100" />
 
 **fin**
