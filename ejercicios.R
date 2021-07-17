@@ -1,0 +1,226 @@
+install.packages("tidyverse")
+library(tidyverse)
+
+#1)
+#a) 
+a<- function(x=0.3, y=0.15){
+  valNum<- ((x*y)/((x*y)+(0.2*0.8)+(0.5*0.12)))
+  return(valNum)
+}
+a()
+
+
+#b)
+b<- function(m=5, n=6){
+  valNumb<- (((m^n)/factorial(n))*(exp(-m)))
+  return(valNumb)
+}
+b()
+
+
+#c)
+c<- function(h=20, g=7){
+  valNumc<- (choose(h,g)*(0.4^7)*(0.6^13))
+  return(valNumc)
+}
+c()
+
+#2)
+#a)
+sum(1:1000)
+#b)
+sum(2^(0:10))
+
+#3)
+#a)
+load("ei1012-1516-la-s1-datos (1).RData")
+grupo
+length(grupo)
+#b)
+which(grupo == "A")
+
+#4)
+#a)
+nota
+sum(nota)
+
+#b)
+mean(nota)
+
+#c)
+which(nota>=7.0)
+
+#d)
+sort(nota, decreasing = T)
+
+#e)
+which(nota == max(nota))
+
+#5)
+#a)
+sum(nota[1:10])
+
+#b)
+length(grupo[grupo=="C"])
+
+#c)
+length(nota[nota>=5])
+
+#d)
+length(nota[grupo == "B" & nota >= 5])
+
+#e)
+(length(nota[grupo == "C" & nota >= 5])/length(nota[grupo == "C"]))*100
+
+#f)
+grupo[nota == max(nota)]
+
+grupo[nota == min(nota)]
+
+#g)
+library(dplyr)
+notasEst <- dplyr::tibble(grupoAyB = grupo, notaAyB = nota)
+notasEst %>%
+  dplyr::filter((grupoAyB == "A" & notaAyB >=5) | (grupoAyB == "B" & notaAyB >= 5)) %>%
+  dplyr::summarise(mean(notaAyB))
+
+
+#6)
+#cuantil 66 de todos
+quantile(nota, probs = 0.66)
+#cuantil 66 del grupo'C' solamente"
+quantile(nota[grupo=="C"], probs = 0.66)
+
+#7) Un alumno tiene una nota de 4.9.
+#¿Qué porcentaje, del total de alumnos, tiene una nota menor o igual que la suya? 
+((length(nota[nota <= 4.9]))/(length(nota)))*100
+
+#¿Y qué porcentaje tiene una nota mayor o igual que la suya?
+((length(nota[nota >= 4.9]))/(length(nota)))*100
+
+#8) Realiza el gráfico de diagramas de caja de las notas de cada grupo,
+#para poder comparar el nivel de cada uno de ellos.
+
+library(ggplot2)
+notasEst <- dplyr::tibble(grupo, nota)
+notasEst %>% ggplot(mapping = aes(x = grupo, y = nota)) +
+  geom_boxplot()
+
+
+#9) Si la variable conc recoge la concentración de plomo (en ppm) en el aire de cierta zona durante un día completo
+#a) ¿Cuál ha sido la concentración máxima?
+load(url("https://goo.gl/uDzU8v"))
+max(conc)
+
+#b) ¿En cuántos de los muestreos se ha superado la concentración de 40.0 ppm?
+length(conc[conc > 40])
+
+#c) ¿Cuál ha sido la concentración media del día?
+mean(conc)
+
+#d) ¿Cuáles fueron las 10 mediciones más bajas del día?
+sort(conc)[1:10]
+
+#e) Si la primera medida fue a las 00:00. ¿A qué hora del día se alcanzó la concentración máxima?
+fecha <- seq(
+  as.POSIXct("2021-01-01 00:00"),
+  length.out = length(conc),
+  by = "5 min"
+)
+
+#concentracion de plomo y las fechas
+concYfech <- data.frame(conc, fecha)
+#maximo de concentracion con fecha
+concYfech[conc == max(conc),]
+
+
+#SEGUNDA PARTE
+#1)
+z<-matrix(c(1:10,(1:10)^2), nrow = 10)
+DF2 = as.data.frame((z), row.names= c("eje_x", "eje_y"))
+View(DF2)
+ggplot(data = DF2) +
+  geom_point(mapping = aes(x =V1 , y =V2), color = "blue")
+
+#2)
+matrix(c(1,2,3,2,4,6,3,6,9,4,8,12), nrow = 4, byrow = T)
+
+#3)
+diag(x = 1,nrow = 3)
+
+#4)
+matriz_cero <- function(val1,val2){
+  resultado <- matrix(0, nrow = val1, ncol = val2)
+  return(resultado)
+}
+matriz_cero(4,5)
+
+#5)
+diag(x = c(0,2,3,4),nrow = 4)
+
+#6)
+matriz_A <- matrix(c(1,2,3,2,4,6,3,6,9,4,8,12), nrow = 4, byrow = T)
+t(matriz)
+
+#7)
+#c)
+matriz_B <- diag(x = c(0,2,3,4),nrow = 4)
+3*matriz_B
+#d)
+matriz_B%*%matriz_A
+
+#8)
+P = matrix(c(1,2,3,-2,4,-2,1,0,1), nrow = 3, byrow = T)
+
+potencia <- function(x,k){
+  r <- diag(dim(x)[2])
+  for(i in 1:k){
+    r <- r%*%x
+  }
+  r
+}
+potencia(P,6)
+
+#9)
+ecuaciones <- rbind(c(3, -1, 1), 
+            c(9, -2, 1), 
+            c(3, 1, -2))
+equivalencias <- c(-1, -9, -9)
+solve(ecuaciones, equivalencias)
+
+#10)
+#?eigen()
+#?det()
+
+#11)
+B <- matrix(c(1:10, seq(2, 20, by = 2), seq(3, 30, by = 3), seq(4, 40, by = 4), 
+              seq(5, 50, by = 5)), nrow = 10)
+A <- matrix(c(rep(c(0,1),7), rep(c(0,0,1),2),1,0,1,1,0), nrow = 5, byrow = T)
+(B)%*%(A)-(A)%*%t(B)
+
+#12)
+x2 <- matrix(c(rep(1,5), 1, -1, 0:2), nrow = 5, byrow = F)
+y2 <- matrix(c(0,0,1,1,3), nrow = 5, byrow = F)
+
+solve(t(x2)%*%x2)%*%t(x2)%*%y2
+
+#13)
+data("co2")
+means = aggregate(co2, FUN=mean)
+year = as.vector(time(means))
+co2 = as.vector(means)
+co2
+
+df_co2 <- data.frame(year = year, co2 = co2) %>%
+  mutate(co2_2 = lag(co2), dif_co2 = co2 - co2_2)
+vect_diferencia <- df_co2$dif_co2[2:39]
+vect_diferencia
+
+
+
+
+
+
+
+
+
